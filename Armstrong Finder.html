@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Armstrong Finder</title>
+    <meta charset="UTF-8">
+    <style media="all">
+      * {box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <div style="height:100vh; width: 100vw; display:flex; align-items: center; justify-content: center; flex-direction: column; background: #7743DB">
+    <h1 style="margin-bottom: 50px" >Armstrong Finder</h1>
+      <input style="height: 25px; color: black" type="number" id="lowerInput" placeholder="Enter lower value">
+      <input style="margin-top: 10px; height:25px; color: black" type="number" id="higherInput" placeholder="Enter higher value">
+      <button style="margin-top: 10px; color:#7743DB; padding: 5px" type="button" id="btn">CHECK</button>
+      <p style="margin-top: 15px;">Armstrong number : 
+      </p>
+      <textarea style="height: 100px; padding: 10px; color: black" name="armstrg" id="armstrong" placeholder="Nothing to show...."></textarea>
+       <p style="margin-top: 5px">Total : <span id="total"></span>
+      </p>
+      <p>Time : <span id="time">0.00</span>s</p>
+    <p style="position: absolute; top: 90vh">Developed by <a href="https://www.linkedin.com/in/md5nayeem">Md Nayeem</a></p>
+    </div>
+    <script>
+      document.getElementById("btn").onclick = function(){
+        let start = performance.now();
+        let total = 0;
+        myarr = [];
+        let lowerInput = document.getElementById("lowerInput").value;
+       let higherInput = document.getElementById("higherInput").value;
+        let lowerNumber = parseInt(lowerInput);
+        let higherNumber = parseInt(higherInput);
+        for (let x = lowerNumber; x <= higherNumber; x++) {
+          let str = x.toString();
+          let arr = str.split("");
+          let sum = 0;
+          for (let i = 0; i < arr.length; i++) {
+            let cube = (arr[i] ** arr.length);
+            sum += cube;
+          }
+          if (x == sum) {
+           myarr.push(` ${x}`)
+           document.getElementById("armstrong").innerHTML = myarr;
+           total = total + 1;
+          }
+        }
+        document.getElementById("total").innerHTML = total;
+      let end = performance.now();
+      let time = ((end - start)/1000).toFixed(2);
+      document.getElementById("time").innerHTML = time;
+      }
+    </script>
+  </body>
+</html>
