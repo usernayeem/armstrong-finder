@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Armstrong Finder</title>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="tally-5.webp" type="image/x-icon">
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+  <main>
+    <!-- Heading of the webpage -->
+    <h1>Armstrong Finder</h1>
+    <!-- Input field for lower limit -->
+    <div class="max-w-sm space-y-3">
+      <input id="lowerInput" type="text" value="1"
+        class="py-3 px-4 block w-full border-gray-200 rounded-sm text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-balance placeholder-neutral-500 outline-none"
+        placeholder="Enter lower number">
+    </div>
+    <!-- Input field for higher limit -->
+    <div class="max-w-sm space-y-3">
+      <input id="higherInput" type="text" value="1000000"
+        class="py-3 px-4 block w-full border-gray-200 rounded-sm text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-black placeholder-neutral-500 outline-none"
+        placeholder="Enter higher number">
+    </div>
+    <!-- Button to find Armstrong numbers -->
+    <button id="btn" class="btn" type="button">
+      <strong>Find</strong>
+      <div id="container-stars">
+        <div id="stars"></div>
+      </div>
+
+      <div id="glow">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </button>
+    <h2 style="margin-top: 15px;">Armstrong Number :
+    </h2>
+    <div class="max-w-sm space-y-3">
+      <textarea id="armstrong"
+        class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none text-black "
+        rows="3" placeholder="Nothing to show"></textarea>
+    </div>
+    <p style="margin-top: 5px">Total : <span id="total">00</span> Armstrong Number
+    </p>
+    <h2>Time : <span id="time">00</span>s</h2>
+    <h2>Developed by Md Nayeem</h2>
+  </main>
+  <script src="script.js"></script>
+  <script src="./node_modules/preline/dist/preline.js"></script>
+</body>
+
+</html>
