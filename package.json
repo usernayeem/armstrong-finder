@@ -1,0 +1,25 @@
+{
+  "name": "armstrong-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usernayeem/armstrong-finder.git"
+  },
+  "author": "Md Nayeem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/usernayeem/armstrong-finder/issues"
+  },
+  "homepage": "https://github.com/usernayeem/armstrong-finder#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.5"
+  },
+  "dependencies": {
+    "preline": "^2.3.0"
+  }
+}
