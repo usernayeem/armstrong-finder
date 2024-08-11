@@ -100,6 +100,7 @@ Contributions are welcome! If you would like to contribute to this project, foll
    ```bash
    git push -u origin my-branch
    ```
+    Replace `my-branch` with the branch name that you created.
 
 8. **Submit a Pull Request**:
    - Navigate to your forked repository on GitHub.
